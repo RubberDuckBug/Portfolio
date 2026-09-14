@@ -1,7 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    margin-inline: 2px;
+}
+
+.login-box {
+    max-width: fit-content;
+    margin-inline: auto;
+    border: 2px solid;
+    border-radius: 20%;
+    padding: 8em 5em 8em 5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-label {
+    padding: 5px;
+    align-self: flex-start;
+}
+
+/* TODO: Make slider rely less on absolute value */
+
 .toggle-switch {
     position: relative;
-    width: 100px;
+    width: 180px;
     height: 40px;
+    align-self: center;
 }
 
 .toggle-input {
@@ -34,40 +64,35 @@
 
 .toggle-text-on {
     left: 10px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    opacity: 0.9;
 }
 
 .toggle-text-off {
     right: 10px;
-    opacity: 1;
-    transition: opacity 0.3s;
+    opacity: 0.9;
 }
 
 .toggle-slider {
     position: absolute;
     top: 3px;
     left: 3px;
-    width: 34px;
+    width: 80px;
     height: 34px;
     background-color: white;
-    border-radius: 50%;
+    border-radius: 70%;
     transition: transform 0.3s;
+    opacity: 0.2;
 }
 
-/* When checkbox IS checked (ON state) */
 .toggle-input:checked + .toggle-label {
     background-color: #4CAF50;
 }
 
 .toggle-input:checked + .toggle-label .toggle-slider {
-    transform: translateX(60px);
+    transform: translateX(90px);
 }
 
-.toggle-input:checked + .toggle-label .toggle-text-on {
-    opacity: 1;
-}
-
-.toggle-input:checked + .toggle-label .toggle-text-off {
-    opacity: 0;
+button {
+    margin: 5%;
+    align-self: flex-end;
 }

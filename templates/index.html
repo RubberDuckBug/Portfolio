@@ -8,22 +8,30 @@
     <title>Sign in</title>
 </head>
 <body>
-    <div>
+    <div class="login-box">
         <form>
-            <label for="user">User: </label>
-            <input type="text" id="user" name="user" placeholder="User ID">
+            <div class="main-label">
+                <label for="user">User: </label>
+                <input type="text" id="user" name="user" placeholder="User ID">
+            </div>
 
-            <label for="password">Password: </label>
-            <input type="password" id="password" name="password" placeholder="Password">
+            <br>
+
+            <div class="main-label">
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
 
             <div class="toggle-switch">
                 <input type="checkbox" id="toggle" class="toggle-input">
                 <label for="toggle" class="toggle-label">
-                    <span class="toggle-text-on">ON</span>
-                    <span class="toggle-text-off">OFF</span>
+                    <span class="toggle-text-on">EMPLOYEE</span>
+                    <span class="toggle-text-off">EMPLOYER</span>
                     <span class="toggle-slider"></span>
                 </label>
             </div>
+
+            <br>
 
             <button type="submit">Submit</button>
         </form>
