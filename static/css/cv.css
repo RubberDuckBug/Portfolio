@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+}
+
+.button-redirect {
+    display: inline-block;
+    background-color: #2563eb;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    width: 50%;
+    height: 5vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 2rem;
+}
+
+#no-redirect {
+    color: white;
+}
+
+#redirect {
+    color: white;
+    cursor: pointer;
+    border-color: rgb(0,0,0);
+    border-bottom: 5px solid;
+    border-left: 5px solid;
+}
+
+#redirect:hover {
+  background-color: #1d4ed8;
+}
+
+#redirect:active {
+  background-color: #1e40af;
+}
+
+section {
+    padding: 1vh 1vw 1vh 1vw;
+}
