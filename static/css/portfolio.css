@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+}
+
+.button-redirect {
+    display: inline-block;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+    width: 50%;
+    height: 5vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    user-select: none;
+}
+
+.button-redirect:active {
+    transform: scale(0.96);
+}
+
+#no-redirect {
+    background-color: black;
+    color: white;
+    border-radius: 0 20px 0 0;
+}
+
+#redirect {
+    background-color: white;
+    color: black;
+    border-radius: 20px 0 0 0;
+}
+
+#redirect:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+h2 {
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+}
+
+h6 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+section {
+    padding: 1vh 1vw 1vh 1vw;
+    font-size: 1.5rem;
+    border: 2px dotted;
+    border-radius: 20px;
+    margin: 2%;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+p, li {
+    font-size: 1rem;
+}
+
+.bullet-intro {
+    margin-bottom: 2px;
+}
+
+ul {
+    margin-top: 2px;
+}
