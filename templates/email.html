@@ -9,8 +9,8 @@
     <title>Email me</title>
 </head>
 <body>
-    <form action="/submit" method="post">
-        {{ form.message.label }} {{ form.message(rows=5, cols=50) }}
+    <form action="/email" method="post">
+        {{ form.message.label }} {{ form.message(rows=8, cols=60) }}
         {% for error in form.message.errors %}
             <span>{{ error }}</span><br>
         {% endfor %}
