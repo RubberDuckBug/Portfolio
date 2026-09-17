@@ -27,7 +27,7 @@
                     {% endfor %}
                 </div>
 
-                {% if get_flashed_messages() is true %}
+                {% if get_flashed_messages() %}
                     <div class="main-label">
                         {% for message in get_flashed_messages() %}
                             <p>{{ message }}</p>
@@ -36,7 +36,7 @@
                 {% endif %}
 
                 <div class="options">
-                    <img src="../static/images/GoBackArrow.png" alt="Go Back" class="arrow">
+                    <a href="/cv"> <img src="../static/images/GoBackArrow.png" alt="Go Back" class="arrow"> </a>
                     <button type="submit">Send</button>
                 </div>
             </form>

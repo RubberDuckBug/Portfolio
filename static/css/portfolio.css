@@ -1,3 +1,7 @@
+html {
+    font-size: 18px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -47,7 +51,22 @@ header {
 
 h2 {
     margin-top: 1%;
-    margin-bottom: 1.5%;
+    margin-bottom: 0.3%;
+}
+
+.github {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-decoration: none;
+    color: black;
+    font-size: 0.67em;
+    font-weight: bold;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+}
+
+.github:hover {
+    text-decoration: underline;
 }
 
 h6 {
@@ -61,6 +80,7 @@ section {
     border: 2px dotted;
     border-radius: 20px;
     margin: 2%;
+    margin-bottom: 5%;
 }
 
 img {
@@ -94,6 +114,18 @@ footer {
     justify-content: flex-end;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
 .email {
-    margin-right: 2%;
+    margin-right: 1.5%;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.8%;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(52, 101, 213);
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
 }

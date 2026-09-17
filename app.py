@@ -24,8 +24,8 @@ def portfolio():
 
 # Adapted this for AWS emails -> https://qxf2.com/blog/sending-email-through-amazon-ses-with-flask-app/
 class EmailForm(Form):
-    companyName = StringField('Company Name:', validators=[validators.DataRequired()])
-    message = TextAreaField('Message:', validators=[validators.DataRequired()])
+    companyName = StringField('Company Name', validators=[validators.DataRequired()])
+    message = TextAreaField('Message', validators=[validators.DataRequired()])
 
 @app.route('/email', methods=['GET', 'POST'])
 def email():
