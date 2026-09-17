@@ -1,11 +1,13 @@
 # Import
 from flask import Flask, render_template, flash, request
-from wtforms import Form, TextAreaField, validators
+from wtforms import Form, StringField, TextAreaField, validators
 import boto3
+import os
 from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 @app.route('/')
 def index():
@@ -22,7 +24,8 @@ def portfolio():
 
 # Adapted this for AWS emails -> https://qxf2.com/blog/sending-email-through-amazon-ses-with-flask-app/
 class EmailForm(Form):
-    message = TextAreaField('Message', validators=[validators.DataRequired()])
+    companyName = StringField('Company Name:', validators=[validators.DataRequired()])
+    message = TextAreaField('Message:', validators=[validators.DataRequired()])
 
 @app.route('/email', methods=['GET', 'POST'])
 def email():
@@ -37,7 +40,7 @@ def email():
     # Checks if someone is sending an email
     if request.method == 'POST' and form.validate():
         emailAddress = "cabbagedevops@gmail.com"
-        subject = "NEW JOB OFFER"
+        subject = "NEW JOB OFFER - " + request.form['companyName']
         message = request.form['message']
 
         emailData = {}
@@ -54,6 +57,8 @@ def email():
                                   'Text': {'Charset': 'UTF-8', 'Data': message} },},
             Source= emailAddress,
         )
+
+        flash("Your message has been sent")
 
     return render_template('email.html', form=form)
 

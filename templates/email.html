@@ -9,12 +9,37 @@
     <title>Email me</title>
 </head>
 <body>
-    <form action="/email" method="post">
-        {{ form.message.label }} {{ form.message(rows=8, cols=60) }}
-        {% for error in form.message.errors %}
-            <span>{{ error }}</span><br>
-        {% endfor %}
-        <button type="submit">Send</button>
-    </form>
+    <div class="email-box">
+        <h2>Email me</h2>
+            <form action="/email" method="post">
+                <!-- Jinja syntax -->
+                <div class="main-label">
+                    {{ form.companyName.label(class="input-label") }} {{ form.companyName(size=40, class="input-box") }}
+                    {% for error in form.companyName.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+
+                <div class="main-label">
+                    {{ form.message.label(class="input-label") }} {{ form.message(rows=8, cols=40, class="input-box") }}
+                    {% for error in form.message.errors %}
+                        <p>{{ error }}</p><br>
+                    {% endfor %}
+                </div>
+
+                {% if get_flashed_messages() is true %}
+                    <div class="main-label">
+                        {% for message in get_flashed_messages() %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="options">
+                    <img src="../static/images/GoBackArrow.png" alt="Go Back" class="arrow">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+    </div>
 </body>
 </html>

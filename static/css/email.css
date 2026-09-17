@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    /* https://pin.it/5PoXSApAX */
+    background-image: url('../images/BackgroundImageEmail.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    margin-inline: 2px;
+    font-family: 'Inter', sans-serif;
+}
+
+.email-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px); /* used for Safari */
+    width: 20%;
+    margin-inline: auto;
+    border: 2px solid;
+    border-radius: 20%;
+    padding: 4em 5em 4em 5em;
+}
+
+@media (max-width: 750px) {
+    .email-box {
+        padding: 1em 2em 1em 2em;
+    }
+}
+
+h2 {
+    margin-top: 0%;
+    margin-bottom: 15%;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-label {
+    padding: 5px;
+    width: 90%;
+    align-self: flex-start;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-box {
+    padding: 3%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.arrow {
+    height: 30px;
+    width: 30px;
+}
+
+button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-self: flex-end;
+    font-size: 0.9rem;
+    padding: 4% 7% 4% 7%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3 ease;
+    border: none;
+}
+
+button:active {
+    transform: scale(0.96);
+}

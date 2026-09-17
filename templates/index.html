@@ -10,34 +10,31 @@
 </head>
 <body>
     <div class="login-box">
+        <h2>Sign in</h2>
         <form>
             <div class="main-label">
-                <label for="user">User: </label>
-                <input type="text" id="user" name="user" placeholder="User ID">
+                <label class="input-box-label" for="user">User</label>
+                <input class="input-box" type="text" id="user" name="user" placeholder="User ID">
             </div>
 
             <br>
 
             <div class="main-label">
-                <label for="password">Password: </label>
-                <input type="password" id="password" name="password" placeholder="Password">
+                <label class="input-box-label" for="password">Password</label>
+                <input class="input-box" type="password" id="password" name="password" placeholder="Password">
             </div>
 
             <div class="toggle-switch">
                 <input type="checkbox" id="toggle" class="toggle-input">
                 <label for="toggle" class="toggle-label">
-                    <span class="toggle-text-on">EMPLOYEE</span>
+                    <span class="toggle-text-on">CANDIDATE</span>
                     <span class="toggle-text-off">EMPLOYER</span>
                     <span class="toggle-slider"></span>
                 </label>
             </div>
 
             <br>
-
-            <button type="submit">Submit</button>
-
-            <br>
-            <a href="/cv">CV</a>
+            <button type="submit"><b>Submit</b></button>
         </form>
     </div>
 </body>

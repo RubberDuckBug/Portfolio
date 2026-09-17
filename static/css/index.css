@@ -1,18 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body {
+    /* https://pin.it/5Vxigx3Bm */
+    background-image: url('../images/BackgroundImageIndex.jpg');
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     margin-inline: 2px;
+    font-family: 'Inter', sans-serif;
 }
 
 .login-box {
-    max-width: fit-content;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px); /* used for Safari */
+    width: 20%;
     margin-inline: auto;
     border: 2px solid;
     border-radius: 20%;
-    padding: 8em 5em 8em 5em;
+    padding: 4em 5em 4em 5em;
+}
+
+h2 {
+    margin-top: 0%;
+    margin-bottom: 15%;
+    text-align: center;
 }
 
 form {
@@ -22,7 +37,20 @@ form {
 
 .main-label {
     padding: 5px;
+    width: 90%;
     align-self: flex-start;
+}
+
+.input-box-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-box {
+    padding: 3%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
 }
 
 /* TODO: Make slider rely less on absolute value */
@@ -45,7 +73,7 @@ form {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #ccc;
+    background-color: rgb(150, 150, 150);
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -76,16 +104,16 @@ form {
     position: absolute;
     top: 3px;
     left: 3px;
-    width: 80px;
+    width: 85px;
     height: 34px;
     background-color: white;
-    border-radius: 70%;
+    border-radius: 20px;
     transition: transform 0.3s;
     opacity: 0.2;
 }
 
 .toggle-input:checked + .toggle-label {
-    background-color: #4CAF50;
+    background-color: rgb(52, 60, 52);
 }
 
 .toggle-input:checked + .toggle-label .toggle-slider {
@@ -95,4 +123,16 @@ form {
 button {
     margin: 5%;
     align-self: flex-end;
+    font-size: 0.9rem;
+    padding: 4% 7% 4% 7%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3 ease;
+    border: none;
+}
+
+button:active {
+    transform: scale(0.96);
 }
