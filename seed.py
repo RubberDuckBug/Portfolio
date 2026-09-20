@@ -7,8 +7,8 @@ app = create_website()
 
 with app.app_context():
     db.create_all()
-    if not Employer.query.filter_by(username="AdamSmasher").first():
-        user = Employer(username="AdamSmasher", password=generate_password_hash("password"))
+    if not Employer.query.filter_by(username="RubberDuck").first():
+        user = Employer(username="RubberDuck", password=generate_password_hash("36-Cabbage"))
         db.session.add(user)
         db.session.commit()
         print("Test user created.")
