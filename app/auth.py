@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, abort
-from flask_login import login_user
+from flask_login import login_user, login_required, logout_user
 from app.forms import LoginForm, EmailForm
 from app.models import Employer, Candidate
 from app.utils import url_has_allowed_host_scheme
@@ -37,3 +37,9 @@ def login():
             flash('Invalid username and/or password.')
 
     return render_template('index.html', form=form)
+
+@auth.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('auth.login'))

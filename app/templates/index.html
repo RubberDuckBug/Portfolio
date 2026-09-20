@@ -39,7 +39,7 @@
             </div>
 
             {% if get_flashed_messages() %}
-                <div class="main-label">
+                <div class="main-label" id="flash-message">
                     {% for message in get_flashed_messages() %}
                         <p>{{ message }}</p>
                     {% endfor %}

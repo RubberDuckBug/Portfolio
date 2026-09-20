@@ -53,8 +53,6 @@ form {
     border: none;
 }
 
-/* TODO: Make slider rely less on absolute value */
-
 .toggle-switch {
     position: relative;
     width: 180px;
@@ -135,4 +133,11 @@ button {
 
 button:active {
     transform: scale(0.96);
+}
+
+#flash-message {
+    margin-top: 2%;
+    max-width: fit-content;
+    margin-inline: auto;
+    color: rgb(220, 76, 66);
 }
