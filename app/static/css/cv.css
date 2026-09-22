@@ -58,6 +58,10 @@ main {
     font-size: 1.5rem;
 }
 
+#first {
+    border-top: none;
+}
+
 section {
     padding: 1vh 1vw 1vh 1vw;
     font-size: 1.5rem;
@@ -74,11 +78,17 @@ h6 {
 }
 
 p, li {
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+
+li {
+    line-height: 1.7;
+    margin-bottom: 0.4em;
 }
 
 ul {
     margin-top: 2px;
+    margin-bottom: 8px;
 }
 
 footer {

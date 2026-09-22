@@ -91,15 +91,27 @@ section {
     margin-bottom: 5%;
 }
 
-img {
+.video {
+    /* So the video is now the same size as an image */
+    aspect-ratio: 16 / 9; /* Not supported on older browsers */
+    width: 100%;
+}
+
+img, .video, video {
     max-width: 80%;
     height: auto;
     margin: auto;
     display: block;
+    border: none;
 }
 
 p, li {
     font-size: 1rem;
+}
+
+li {
+    line-height: 1.7;
+    margin-bottom: 0.4em;
 }
 
 .bullet-intro {
