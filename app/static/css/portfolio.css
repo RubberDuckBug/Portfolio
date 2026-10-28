@@ -77,6 +77,10 @@ h2 {
     text-decoration: underline;
 }
 
+#noLink:hover {
+    text-decoration: none;
+}
+
 h6 {
     margin-top: 1%;
     margin-bottom: 1%;
