@@ -1,13 +1,13 @@
 from flask import Flask
-from sqlalchemy.testing.pickleable import User
+# from sqlalchemy.testing.pickleable import User
 
 from app.config import Config
-from app.database import db
-from app.models import Employer, Candidate
-from flask_login import LoginManager
+# from app.database import db
+# from app.models import Employer, Candidate
+# from flask_login import LoginManager
 
 # https://flask-login.readthedocs.io/en/latest/#flask-login
-login_manager = LoginManager()
+# login_manager = LoginManager()
 
 # Using a function so it creates an instance of the Flask app which can be used for real, tests ... with a changed set of configs
 def create_website():
@@ -17,37 +17,37 @@ def create_website():
     app.config.from_object(Config)
 
     # Connects the database to the Flask instance
-    db.init_app(app)
+    # db.init_app(app)
 
-    login_manager.init_app(app)
-    # Redirects to index.html if user not logged in
-    login_manager.login_view = 'auth.login'
+    # login_manager.init_app(app)
+    # # Redirects to index.html if user not logged in
+    # login_manager.login_view = 'auth.login'
 
     # Collects all the routes
     from app.routes import main
-    from app.auth import auth
+    # from app.auth import auth
     # Adds them to the instance
     app.register_blueprint(main)
-    app.register_blueprint(auth)
+    # app.register_blueprint(auth)
 
-    with app.app_context():
-        db.create_all()
+    # with app.app_context():
+    #     db.create_all()
 
     return app
 
-from app.models import Candidate
+# from app.models import Candidate
 
-@login_manager.user_loader
-def load_user(userId):
-    role, id = userId.split('-')
-    id = int(id)
-
-    if role == "Candidate":
-        return Candidate.query.get(id)
-    elif role == "Employer":
-        return Employer.query.get(id)
-    else:
-        return None
-
-    # Replace body when have database
-    return Candidate.query.get(int(userId))
+# @login_manager.user_loader
+# def load_user(userId):
+#     role, id = userId.split('-')
+#     id = int(id)
+#
+#     if role == "Candidate":
+#         return Candidate.query.get(id)
+#     elif role == "Employer":
+#         return Employer.query.get(id)
+#     else:
+#         return None
+#
+#     # Replace body when have database
+#     return Candidate.query.get(int(userId))
